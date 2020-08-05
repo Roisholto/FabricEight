@@ -77,9 +77,9 @@ export default{
     data:function(){
       return {
         items: [
-          { icon: 'mdi-home', text: 'Home' , to:{name:'home'}},
+          { icon: 'mdi-home', text: 'Home' , to:{name:'home', exact:true}},
           { heading: 'SELL' },
-          { icon: 'mdi-circle-outline', text: 'Embroidery' , to:{name:'sell'}},
+          { icon: 'mdi-circle-outline', text: 'Embroidery' , to:{name:'sell', exact:true}},
           ]
         }
     },

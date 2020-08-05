@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="">
-                  <div class="text-left">
+                  <div class="text-right">
                     <div class="caption mb-n2">Grand Total</div>
                     <div class="text-h4">{{naija_currency(grand_total)}}</div>
                   </div>
@@ -107,6 +107,7 @@
                 <div style="max-width:140px">
                   <v-text-field
                     v-model.number="form.discount"
+                    type="number"
                     name="discount"
                     placeholder="Discount"
                     label="Discount" />
@@ -119,8 +120,8 @@
                   name="amount_paid"
                   placeholder="Amount paid"
                   label="Amount paid"
-                  type="currency"
-                  v-model="form.amount_paid"
+                  type="number"
+                  v-model.number="form.amount_paid"
                   />
               </div>
 

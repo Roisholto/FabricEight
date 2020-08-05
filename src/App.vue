@@ -1,16 +1,13 @@
 <template>
-  <LeftNavLayout>
-    <router-view />
-  </LeftNavLayout>
+  <router-view />
 </template>
 
 <script>
-import LeftNavLayout from './layouts/LeftNavLayout.vue'
 export default {
   name: 'App',
 
   components: {
-    LeftNavLayout
+    
   },
 
   data: () => ({

@@ -17,14 +17,16 @@
             >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <div class="d-flex align-center">
-              <v-img
+              <router-link :to="{name:'home'}">
+                <v-img
                 alt="Vuetify Logo"
                 class="shrink mr-2"
                 contain
                 src="/img/f8logo.png"
                 transition="scale-transition"
                 width="140"
-              />
+                />
+              </router-link>
 
               <!--<v-img
                 alt="Vuetify Name"
@@ -41,6 +43,7 @@
             <!-- Contains the menu -->
             <slot name="header"></slot>
 
+            <UserMenu />
             <template v-slot:extension v-if="usingExtension">
               <!--<v-container class="">-->
                 <slot name="extension">
@@ -66,6 +69,7 @@
 <script>
 import LeftNav from '@/components/LeftNav.vue' ;
 import {APP_NAME} from '@/constants.js' ;
+import UserMenu from '@/components/UserMenu.vue' ;
 
 export default {
   props: {
@@ -94,6 +98,7 @@ export default {
 
   components:{
     LeftNav,
+    UserMenu
   },
 
   methods:{
